@@ -1,0 +1,16 @@
+{
+  "name": "@trackdays-web-scraper/trackdays-co-uk",
+  "version": "1.0.0",
+  "description": "A web scraper for getting track day information from trackdays.co.uk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "scraper",
+    "trackdays"
+  ],
+  "author": "Tom Seldon <tom@tomseldon.co.uk>",
+  "license": "ISC"
+}

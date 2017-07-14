@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "A web scraper for getting track day information from trackdays.co.uk",
     "main": "dist/index.js",
+    "private": false,
     "files": ["dist"],
     "repository": "https://github.com/TomSeldon/trackdays-co-uk-web-scraper",
     "scripts": {

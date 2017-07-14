@@ -4,6 +4,7 @@
     "description": "A web scraper for getting track day information from trackdays.co.uk",
     "main": "dist/index.js",
     "files": ["dist"],
+    "repository": "https://github.com/TomSeldon/trackdays-co-uk-web-scraper",
     "scripts": {
         "preunit-tests": "tsc --project tsconfig-unit-tests.json",
         "unit-tests": "mocha test-dist/unit/**/*.spec.js",

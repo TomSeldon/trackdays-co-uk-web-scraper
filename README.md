@@ -1,5 +1,7 @@
 # Web scraper for trackdays.co.uk
 
+[![Build status](https://ci.appveyor.com/api/projects/status/8y93v4wrbjssjhxn/branch/master?svg=true)](https://ci.appveyor.com/project/TomSeldon/trackdays-co-uk-web-scraper/branch/master)
+
 > A small library for fetching event information from https://www.trackdays.co.uk
 
 **Note: I have no affiliation with trackdays.co.uk**

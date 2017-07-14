@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noEmitOnError": true,
+        "strictNullChecks": true,
+        "removeComments": false,
+        "outDir": "test-dist/unit",
+        "target": "es6",
+        "sourceMap": true
+    },
+    "include": ["test/unit/**/*.spec.ts"]
+}

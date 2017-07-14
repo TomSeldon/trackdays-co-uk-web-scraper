@@ -1,16 +1,34 @@
 {
-  "name": "@trackdays-web-scraper/trackdays-co-uk",
-  "version": "1.0.0",
-  "description": "A web scraper for getting track day information from trackdays.co.uk",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "web",
-    "scraper",
-    "trackdays"
-  ],
-  "author": "Tom Seldon <tom@tomseldon.co.uk>",
-  "license": "ISC"
+    "name": "@trackdays-web-scraper/trackdays-co-uk",
+    "version": "0.0.1",
+    "description": "A web scraper for getting track day information from trackdays.co.uk",
+    "main": "dist/index.js",
+    "files": ["dist"],
+    "scripts": {
+        "preunit-tests": "tsc --project tsconfig-unit-tests.json",
+        "unit-tests": "mocha test-dist/unit/**/*.spec.js",
+        "preintegration-tests": "npm run build",
+        "integration-tests": "mocha test/integration/**/*.spec.js",
+        "test": "npm run unit-tests && npm run integration-tests",
+        "build": "tsc",
+        "prepublish": "npm test && npm run build"
+    },
+    "keywords": ["web", "scraper", "trackdays"],
+    "author": "Tom Seldon <tom@tomseldon.co.uk>",
+    "license": "ISC",
+    "dependencies": {
+        "@types/cheerio": "^0.22.2",
+        "@types/request": "0.0.45",
+        "cheerio": "^1.0.0-rc.2",
+        "moment": "^2.18.1",
+        "request": "^2.81.0"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.0.1",
+        "@types/mocha": "^2.2.41",
+        "chai": "^4.0.2",
+        "mocha": "^3.4.2",
+        "prettier": "^1.5.2",
+        "typescript": "^2.4.1"
+    }
 }

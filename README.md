@@ -56,7 +56,11 @@ getBikeEventSummaries(): Promise<TrackdaySummary[]>;
 {
     eventDate: '2017-07-15',
     format: 'Open Pitlane',
-    groups: [],
+    groups: [
+        { groupType: 'NOVICE', isFull: false },
+        { groupType: 'INTERMEDIATE', isFull: true },
+        { groupType: 'ADVANCED', isFull: false }
+    ],
     isFull: false,
     noiseLimits: {
         static: { limit: 102, units: 'dB(A)' },
@@ -72,3 +76,10 @@ getBikeEventSummaries(): Promise<TrackdaySummary[]>;
     id: 10721
 };
 ```
+
+##### Notes: 
+
+* `id` will only be available if the track day is available (i.e. it can still be booked).
+* `groups` information is not always available. Sometimes an event may be available, but no group information will be supplied.
+* Noise limits (static and drive by) will be included if available. There absence does not necessarily mean there's no limit,
+  just that the organiser has not provided the data.

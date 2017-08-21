@@ -1,10 +1,12 @@
 {
     "name": "@trackdays-web-scraper/trackdays-co-uk",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "A web scraper for getting track day information from trackdays.co.uk",
     "main": "dist/index.js",
     "private": false,
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "repository": "https://github.com/TomSeldon/trackdays-co-uk-web-scraper",
     "scripts": {
         "preunit-tests": "tsc --project tsconfig-unit-tests.json",
@@ -15,7 +17,11 @@
         "build": "tsc",
         "prepublishOnly": "npm test && npm run build"
     },
-    "keywords": ["web", "scraper", "trackdays"],
+    "keywords": [
+        "web",
+        "scraper",
+        "trackdays"
+    ],
     "author": "Tom Seldon <tom@tomseldon.co.uk>",
     "license": "ISC",
     "dependencies": {

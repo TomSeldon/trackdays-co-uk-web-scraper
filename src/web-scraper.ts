@@ -19,10 +19,26 @@ export class WebScraper {
         return this.fetchEventsAtUrl(url);
     }
 
+    getCarEventSummariesAtVenue(venue: string): Promise<TrackdaySummary[]> {
+        return this.getCarEventSummaries().then(events =>
+            events.filter(
+                event => event.track.name.toLowerCase() === venue.toLowerCase()
+            )
+        );
+    }
+
     getBikeEventSummaries(): Promise<TrackdaySummary[]> {
         const url = 'https://www.trackdays.co.uk/calendar/bikes/';
 
         return this.fetchEventsAtUrl(url);
+    }
+
+    getBikeEventSummariesAtVenue(venue: string): Promise<TrackdaySummary[]> {
+        return this.getBikeEventSummaries().then(events =>
+            events.filter(
+                event => event.track.name.toLowerCase() === venue.toLowerCase()
+            )
+        );
     }
 
     private fetchEventsAtUrl(url: string): Promise<TrackdaySummary[]> {
